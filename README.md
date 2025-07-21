@@ -6,7 +6,7 @@ A complete data engineering mini-project applying **Lambda Architecture** using:
 - 🔁 Streaming data (live prices from CoinGecko API)
 - 🛢 PostgreSQL for storage
 - 🐍 Python for ETL
-- 📊 [coming soon] Streamlit Dashboard
+- 📊 Simple Streamlit Dashboard
 
 ---
 

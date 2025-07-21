@@ -66,13 +66,19 @@ psql -h localhost -U postgres -f db/schema.sql
 ### 3. Insert Batch Data (from Kaggle)
 
 ```bash
-python scripts/insert_batch.py
+python batch_bitcoin.py
 ```
 
 ### 4. Start Streaming Data
 
 ```bash
-python scripts/stream_live_prices.py
+python stream_prices.py
+```
+
+### 4. Run Streamlit
+
+```bash
+python streamlit run streamlit.py
 ```
 
 ---
@@ -108,6 +114,6 @@ GROUP BY symbol;
 
 ## 🙌 Author
 
-**Omar Maher**  
+**Omar Oun**  
 💼 Data Engineer in the making | Passionate about pipelines  
 📩 Feel free to connect on [LinkedIn](https://www.linkedin.com/in/omaroun/)

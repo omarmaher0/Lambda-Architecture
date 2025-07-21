@@ -75,7 +75,28 @@ python batch_bitcoin.py
 python stream_prices.py
 ```
 
-### 4. Run Streamlit
+### 5. Create view in PostgreSQL
+
+```sql
+CREATE OR REPLACE VIEW combined_prices AS
+SELECT
+    'BTC' AS symbol,
+    TO_TIMESTAMP("Date", 'MM/DD/YYYY') AS timestamp,
+    REPLACE("Price", ',', '')::FLOAT AS price,
+    'batch' AS source
+FROM btc_batch
+
+UNION ALL
+
+SELECT
+    symbol,
+    timestamp,
+    price,
+    'stream' AS source
+FROM live_prices;
+```
+
+### 6. Run Streamlit
 
 ```bash
 python streamlit run streamlit.py

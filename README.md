@@ -121,6 +121,7 @@ GROUP BY symbol;
 ## 🔍 Next Steps
 
 - ✅ Add Streamlit Dashboard (Real-time chart)
+  You can check from the file (Professional streamlit dashboard.py)
 - ✅ Add Airflow DAG to automate the pipeline
 - ✅ Add anomaly alerts if prices jump/drop suddenly
 
